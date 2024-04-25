@@ -1,0 +1,33 @@
+::view-transition-old(avatar),
+::view-transition-new(avatar) {
+    /* Prevent the default animation,
+  so both views remain opacity:1 throughout the transition */
+    animation: none;
+    /* Use normal blending,
+  so the new view sits on top and obscures the old view */
+    mix-blend-mode: normal;
+    /* Make the height the same as the group,
+  meaning the view size might not match its aspect-ratio. */
+    height: 100%;
+    /* Clip any overflow of the view */
+    overflow: clip;
+}
+
+/* Transition from item details page to category page */
+.category::view-transition-old(avatar) {
+    object-fit: cover;
+}
+
+.category::view-transition-new(avatar) {
+    object-fit: contain;
+}
+
+/* Transition from category page to item details page */
+
+.details::view-transition-old(avatar) {
+    object-fit: contain;
+}
+
+.details::view-transition-new(avatar) {
+    object-fit: cover;
+}
