@@ -27,8 +27,6 @@ const Profile = () => {
   const { account, current } = useSelector((state) => state.profile);
   const dispatch = useDispatch();
   const profile = current ?? account;
-  console.log(current);
-  console.log(account);
 
   const src = `https://api.dicebear.com/7.x/personas/svg?seed=${profile?.name}&&backgroundColor=b6e3f4`;
 

@@ -32,7 +32,7 @@ export const List = styled.div`
   align-items: center;
   gap: 2rem;
   padding: 2rem 1rem;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-behavior: smooth;
 
   /* hide scrollbar */
