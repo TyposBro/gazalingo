@@ -1,14 +1,23 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import { Test, Menu, Rank, Quest, Notification, Profile } from "pages/";
 
-import { Header, Layout } from "components/";
+import { Header, Nav } from "components/";
 
 const Courses = () => {
   return (
     <>
       <Header />
       <Menu />
+    </>
+  );
+};
+
+const Layout = () => {
+  return (
+    <>
+      <Outlet />
+      <Nav />
     </>
   );
 };
