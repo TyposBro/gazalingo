@@ -52,15 +52,9 @@ const Profile = () => {
   return (
     <Container>
       <Settings src={cogwheel} alt="cogwheel" />
-      <Image src={src} style={{
-        viewTransitionName:
-          isTransitioning ? "avatar" : "",
-      }} />
+      <Image src={src} />
       <Meta>
-        <Title style={{
-          viewTransitionName:
-            isTransitioning ? "name" : "",
-        }} >{profile?.name}</Title>
+        <Title >{profile?.name}</Title>
         <Subtitle>{profile?.handle}</Subtitle>
         <Subtitle>Joined {profile?.joined}</Subtitle>
         <div style={{ display: "flex", gap: "2rem", margin: ".5rem 0" }}>
@@ -104,10 +98,7 @@ const Profile = () => {
 
         <Card>
           <CardTitle>
-            <Icon src={lightning} alt="lightning" style={{
-              viewTransitionName:
-                isTransitioning ? "score" : "",
-            }} />
+            <Icon src={lightning} alt="lightning" />
             {profile.total}
           </CardTitle>
           <CardSubtitle>Total XP</CardSubtitle>

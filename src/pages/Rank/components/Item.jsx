@@ -35,15 +35,9 @@ const Item = ({ name, id, score, rank }) => {
   return (
     <Container onClick={handleClick} status={account.id === id && "active"}>
       <Wrapper>{getAvatar()}</Wrapper>
-      <Avatar src={src} style={{
-        viewTransitionName: isTransitioning ? "avatar" : "",
-      }} />
-      <Text style={{
-        viewTransitionName: isTransitioning ? "name" : "",
-      }} >{name}</Text>
-      <Span style={{
-        viewTransitionName: isTransitioning ? "score" : "",
-      }} >{score} XP</Span>
+      <Avatar src={src} />
+      <Text >{name}</Text>
+      <Span >{score} XP</Span>
     </Container>
   );
 };
