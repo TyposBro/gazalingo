@@ -1,4 +1,4 @@
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 
 import { Container, Item, Icon } from "./styled";
 import { challenge, console, profile, notification, gift } from "assets/icons";
@@ -11,19 +11,19 @@ const NavBar = () => {
 
   return (
     <Container>
-      <Item active={checkLocation("quest")} to="/quest">
+      <Item unstable_viewTransition active={checkLocation("quest")} to="/quest">
         <Icon src={gift} alt="quest" />
       </Item>
-      <Item active={checkLocation("rank")} to="/rank">
+      <Item unstable_viewTransition active={checkLocation("rank")} to="/rank">
         <Icon src={challenge} alt="challenge" />
       </Item>
-      <Item active={checkLocation("")} to="/">
+      <Item unstable_viewTransition active={checkLocation("")} to="/">
         <Icon src={console} alt="console" />
       </Item>
-      <Item active={checkLocation("profile")} to="/profile">
+      <Item unstable_viewTransition active={checkLocation("profile")} to="/profile">
         <Icon src={profile} alt="profile" />
       </Item>
-      <Item active={checkLocation("notification")} to="/notification">
+      <Item unstable_viewTransition active={checkLocation("notification")} to="/notification">
         <Icon src={notification} alt="notification" />
       </Item>
     </Container>
