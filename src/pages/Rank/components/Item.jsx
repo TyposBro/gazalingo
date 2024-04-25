@@ -26,7 +26,7 @@ const Item = ({ name, id, score, rank }) => {
 
   const handleClick = () => {
     dispatch(setCurrent({ id, name, score }));
-    navigate("/profile");
+    navigate(`/profile/${id}`);
   };
 
   return (
