@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { Container, Card, List, Title, Subtitle, Progress, Button } from "./styled";
+import { unstable_useViewTransitionState } from "react-router-dom";
 
 const cards = [
   {
@@ -32,6 +33,8 @@ const cards = [
 const Menu = () => {
   const navigate = useNavigate();
 
+  const isTransitioning = unstable_useViewTransitionState("/test");
+
   return (
     <Container>
       <List>
@@ -42,10 +45,17 @@ const Menu = () => {
               {c.done}/{c.total} UNITS
             </Subtitle>
             <Progress />
-            <Button onClick={() => navigate("/detail")} bg="light">
+            <Button unstable_viewTransition to={"/detail"} bg="light">
               SEE DETAILS
             </Button>
-            <Button onClick={() => navigate("/test")} bg="dark">
+            <Button
+              unstable_viewTransition
+              to={"/test"}
+              style={{
+                viewTransitionName: isTransitioning ? "cta-button" : "",
+              }}
+              bg="dark"
+            >
               CONTINUE
             </Button>
           </Card>

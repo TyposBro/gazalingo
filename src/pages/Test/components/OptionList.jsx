@@ -2,7 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { start, stop, next, check } from "context/testSlice";
 
-import { Container, Option, List, Submit, Feedback, FeedbackWrapper } from "../styles/OptionList";
+import {
+  OptionContainer,
+  Option,
+  List,
+  Submit,
+  Feedback,
+  FeedbackWrapper,
+} from "../styles/OptionList";
 import { useState } from "react";
 
 const OptionList = ({ current }) => {
@@ -29,7 +36,7 @@ const OptionList = ({ current }) => {
   };
 
   return (
-    <Container>
+    <OptionContainer>
       <List>
         {options.map((option, index) => (
           <Option
@@ -48,7 +55,7 @@ const OptionList = ({ current }) => {
           {isCorrect === null ? "Check" : "Next"}
         </Submit>
       </FeedbackWrapper>
-    </Container>
+    </OptionContainer>
   );
 };
 

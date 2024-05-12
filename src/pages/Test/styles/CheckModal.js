@@ -14,13 +14,13 @@ const forward = keyframes`
   }
 `;
 
-export const Container = styled.div`
+export const ModalContainer = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
 `;
 
-export const Main = styled.div`
+export const ModalMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@ export const Main = styled.div`
   width: 100%;
 `;
 
-export const Image = styled(SVG)`
+export const ModalImage = styled(SVG)`
   width: 20rem;
   height: auto;
 
@@ -38,7 +38,7 @@ export const Image = styled(SVG)`
   animation-name: ${forward};
 `;
 
-export const Header = styled.div`
+export const ModalHeader = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -47,20 +47,20 @@ export const Header = styled.div`
   animation-name: ${forward};
 `;
 
-export const Title = styled.div`
+export const ModalTitle = styled.div`
   ${typography.headingXl}
   color: #feca00;
   text-align: center;
 `;
 
-export const Description = styled.div`
+export const ModalDescription = styled.div`
   ${typography.displayMd}
   font-weight: 700;
   color: var(--dark-text);
   text-align: center;
 `;
 
-export const Button = styled(ButtonBase)`
+export const ModalButton = styled(ButtonBase)`
   ${typography.buttonLg}
   text-transform: uppercase;
   font-weight: 600;
@@ -76,7 +76,7 @@ export const Button = styled(ButtonBase)`
   border-bottom: 5px solid #1476a3ff;
 `;
 
-export const StatsList = styled.div`
+export const ModalStatsList = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -88,7 +88,7 @@ export const StatsList = styled.div`
   /* gap: 3rem; */
 `;
 
-export const StatsItem = styled.div`
+export const ModalStatsItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +101,7 @@ export const StatsItem = styled.div`
   padding: 0.3rem;
 `;
 
-export const StatsTitle = styled.div`
+export const ModalStatsTitle = styled.div`
   ${typography.body_semibold}
   color: var(--dark-bg);
   display: flex;
@@ -112,7 +112,7 @@ export const StatsTitle = styled.div`
   height: 25%;
 `;
 
-export const StatsValue = styled.div`
+export const ModalStatsValue = styled.div`
   ${typography.buttonLg}
   font-weight: 700;
   background-color: var(--dark-bg);
@@ -127,7 +127,7 @@ export const StatsValue = styled.div`
   gap: 0.5rem;
 `;
 
-export const StatsIcon = styled(SVG)`
+export const ModalStatsIcon = styled(SVG)`
   height: 2.5rem;
   width: auto;
   g > path {
@@ -140,9 +140,9 @@ const cssIcon = css`
   width: auto;
   color: ${({ color }) => color};
 `;
-export const TimeIcon = styled(Time)`
+export const ModalTimeIcon = styled(Time)`
   ${cssIcon}
 `;
-export const CheckIcon = styled(CheckDouble)`
+export const ModalCheckIcon = styled(CheckDouble)`
   ${cssIcon}
 `;

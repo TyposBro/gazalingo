@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { typography } from "styles/";
 import { CloseOutline } from "styled-icons/evaicons-outline/";
 
-export const Container = styled.div`
+export const ProgressContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;

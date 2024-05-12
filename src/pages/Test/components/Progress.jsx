@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { start, stop, next, check } from "context/testSlice";
 
 import {
-  Container,
+  ProgressContainer,
   ProgressBar,
   HeartIcon,
   DismissIcon,
@@ -25,7 +25,7 @@ const Progress = () => {
   };
 
   return (
-    <Container>
+    <ProgressContainer>
       <DismissIconContainer onClick={handleDismiss}>
         <DismissIcon />
       </DismissIconContainer>
@@ -34,7 +34,7 @@ const Progress = () => {
       <HeartIconContainer>
         <HeartIcon src={heart} /> {5 - wrongQuestionList.length}
       </HeartIconContainer>
-    </Container>
+    </ProgressContainer>
   );
 };
 

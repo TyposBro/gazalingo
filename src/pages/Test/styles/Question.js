@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { typography } from "styles/";
 import SVG from "react-inlinesvg";
 
-export const Container = styled.div`
+export const QuestionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

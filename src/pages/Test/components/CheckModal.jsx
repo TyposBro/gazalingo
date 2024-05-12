@@ -4,20 +4,20 @@ import { start, stop, next, check } from "context/testSlice";
 
 import { celebrate, lightning } from "assets/icons/";
 import {
-  Container,
-  Main,
-  Header,
-  Title,
-  Description,
-  Image,
-  StatsList,
-  StatsItem,
-  StatsTitle,
-  StatsValue,
-  StatsIcon,
-  TimeIcon,
-  CheckIcon,
-  Button,
+  ModalContainer,
+  ModalMain,
+  ModalHeader,
+  ModalTitle,
+  ModalDescription,
+  ModalImage,
+  ModalStatsList,
+  ModalStatsItem,
+  ModalStatsTitle,
+  ModalStatsValue,
+  ModalStatsIcon,
+  ModalTimeIcon,
+  ModalCheckIcon,
+  ModalButton,
 } from "../styles/CheckModal";
 import { useNavigate } from "react-router";
 import { useEffect } from "react";
@@ -42,39 +42,39 @@ const CheckModal = () => {
   };
 
   return (
-    <Container>
-      <Main>
-        <Image src={celebrate} />
-        <Header>
-          <Title>Good job</Title>
-          <Description>You scored higher than 97% of students!</Description>
-        </Header>
-        <StatsList>
-          <StatsItem color="#feca00">
-            <StatsTitle>Total XP</StatsTitle>
-            <StatsValue color="#feca00">
-              <StatsIcon src={lightning} />
+    <ModalContainer>
+      <ModalMain>
+        <ModalImage src={celebrate} />
+        <ModalHeader>
+          <ModalTitle>Good job</ModalTitle>
+          <ModalDescription>You scored higher than 97% of students!</ModalDescription>
+        </ModalHeader>
+        <ModalStatsList>
+          <ModalStatsItem color="#feca00">
+            <ModalStatsTitle>Total XP</ModalStatsTitle>
+            <ModalStatsValue color="#feca00">
+              <ModalStatsIcon src={lightning} />
               {reward}
-            </StatsValue>
-          </StatsItem>
-          <StatsItem color="#49c0f8">
-            <StatsTitle>Quick</StatsTitle>
-            <StatsValue color="#49c0f8">
-              <TimeIcon />
+            </ModalStatsValue>
+          </ModalStatsItem>
+          <ModalStatsItem color="#49c0f8">
+            <ModalStatsTitle>Quick</ModalStatsTitle>
+            <ModalStatsValue color="#49c0f8">
+              <ModalTimeIcon />
               03:08
-            </StatsValue>
-          </StatsItem>
-          <StatsItem color="#91d436">
-            <StatsTitle>Good</StatsTitle>
-            <StatsValue color="#91d436">
-              <CheckIcon />
+            </ModalStatsValue>
+          </ModalStatsItem>
+          <ModalStatsItem color="#91d436">
+            <ModalStatsTitle>Good</ModalStatsTitle>
+            <ModalStatsValue color="#91d436">
+              <ModalCheckIcon />
               {(score / questionList.length) * 100}%
-            </StatsValue>
-          </StatsItem>
-        </StatsList>
-      </Main>
-      <Button onClick={handleContinue}>Continue</Button>
-    </Container>
+            </ModalStatsValue>
+          </ModalStatsItem>
+        </ModalStatsList>
+      </ModalMain>
+      <ModalButton onClick={handleContinue}>Continue</ModalButton>
+    </ModalContainer>
   );
 };
 

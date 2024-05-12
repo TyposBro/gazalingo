@@ -17,11 +17,11 @@ export const reset = css`
   /* Animation keyframes */
   @keyframes navLeft {
     0% {
-      transform: translateX(0%);
+      transform: scaleX(100%);
     }
 
     100% {
-      transform: translateX(-50%);
+      transform: scaleX(150%);
     }
   }
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { typography } from "styles/";
 
@@ -72,7 +73,7 @@ export const Subtitle = styled.div`
   text-transform: capitalize;
 `;
 
-export const Button = styled.div`
+export const Button = styled(Link)`
   ${typography.buttonLg}
   text-transform: capitalize;
 
@@ -88,6 +89,7 @@ export const Button = styled.div`
 
   background-color: ${(props) => (props.bg === "dark" ? "var(--dark-bg)" : "var(--secondary-bg)")};
   color: ${(props) => (props.bg === "dark" ? "var(--secondary-bg-darker)" : "var(--dark-text)")};
+  text-decoration: none;
 `;
 export const Progress = styled.div`
   text-transform: capitalize;

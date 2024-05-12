@@ -3,7 +3,7 @@ import { typography } from "styles/";
 import SVG from "react-inlinesvg";
 import { ButtonBase } from "@mui/material";
 
-export const Container = styled.div`
+export const OptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
