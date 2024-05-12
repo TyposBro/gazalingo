@@ -6,15 +6,16 @@ import { Provider } from "react-redux";
 import store from "./context/";
 
 import GlobalStyles from "styles/";
-import { Router } from "./router";
+
+import { Nav } from "components/";
+import { SwiperComponent } from "exp/";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <StyledEngineProvider injectFirst>
       <GlobalStyles />
-      {/* //* Router Logic */}
-      <Router />
-      {/* //* Router Logic */}
+      <SwiperComponent />
+      <Nav />
     </StyledEngineProvider>
   </Provider>
 );

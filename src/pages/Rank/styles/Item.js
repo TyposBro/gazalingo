@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
 import SVG from "react-inlinesvg";
 import { typography } from "styles/";
+import { Link } from "react-router-dom";
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   width: 100%;
   height: 8rem;
   flex-shrink: 0;
@@ -11,6 +12,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 1.5rem;
   color: var(--dark-text);
+  text-decoration: none;
   ${({ status }) =>
     status === "active" &&
     css`

@@ -15,7 +15,7 @@ export const Container = styled.div`
   border-top: 1px solid var(--dark-btn-text-inactive);
 `;
 
-export const Item = styled(Link)`
+export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

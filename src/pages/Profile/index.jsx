@@ -29,9 +29,6 @@ const Profile = () => {
   const { account, current } = useSelector((state) => state.profile);
   const dispatch = useDispatch();
   const profile = current ?? account;
-  const location = useLocation();
-
-  const isTransitioning = unstable_useViewTransitionState(location.pathname);
 
   const src = `https://api.dicebear.com/7.x/personas/svg?seed=${profile?.name}&&backgroundColor=b6e3f4`;
 
@@ -54,7 +51,7 @@ const Profile = () => {
       <Settings src={cogwheel} alt="cogwheel" />
       <Image src={src} />
       <Meta>
-        <Title >{profile?.name}</Title>
+        <Title>{profile?.name}</Title>
         <Subtitle>{profile?.handle}</Subtitle>
         <Subtitle>Joined {profile?.joined}</Subtitle>
         <div style={{ display: "flex", gap: "2rem", margin: ".5rem 0" }}>

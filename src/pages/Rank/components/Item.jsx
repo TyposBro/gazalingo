@@ -7,10 +7,9 @@ import { unstable_useViewTransitionState } from "react-router-dom";
 
 const Item = ({ name, id, score, rank }) => {
   const { account } = useSelector((state) => state.profile);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const url = `/profile`;
-  const isTransitioning = unstable_useViewTransitionState(url);
 
   const src = `https://api.dicebear.com/7.x/personas/svg?seed=${name}&&backgroundColor=b6e3f4,c0aede,d1d4f9`;
 
@@ -29,15 +28,19 @@ const Item = ({ name, id, score, rank }) => {
 
   const handleClick = () => {
     dispatch(setCurrent({ id, name, score }));
-    navigate(`/profile/${id}`);
   };
 
   return (
-    <Container onClick={handleClick} status={account.id === id && "active"}>
+    <Container
+      unstable_useViewTransitionState
+      to={`/${id}`}
+      onClick={handleClick}
+      status={account.id === id && "active"}
+    >
       <Wrapper>{getAvatar()}</Wrapper>
       <Avatar src={src} />
-      <Text >{name}</Text>
-      <Span >{score} XP</Span>
+      <Text>{name}</Text>
+      <Span>{score} XP</Span>
     </Container>
   );
 };
