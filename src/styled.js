@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 3rem;
   background-color: var(--dark-bg);
 
   border-top: 1px solid var(--dark-btn-text-inactive);
@@ -21,15 +21,23 @@ export const Item = styled.div`
   justify-content: center;
   padding: 0.8rem;
   border-radius: 1rem;
+  position: relative;
 
-  ${(props) =>
-    props.active === "active" &&
-    css`
-      border: 2px solid var(--secondary-text);
-    `}
+  /* ${(props) => props.active === "active" && css``} */
+`;
+
+export const Active = styled.div`
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: 2px solid var(--secondary-text);
+  z-index: 1;
+  position: absolute;
 `;
 
 export const Icon = styled(SVG)`
   width: 3.5rem;
   height: 3.5rem;
+  z-index: 2;
+  position: absolute;
 `;

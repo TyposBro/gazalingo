@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import { Test, Menu, Rank, Quest, Notification, Profile } from "pages/";
 
-import { Header, Nav } from "components/";
+import { Header } from "components/";
 
 const coursesRouter = createBrowserRouter([
   {
@@ -34,12 +34,7 @@ const profileRouter = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: (
-          <>
-            <Profile />
-            <Nav />
-          </>
-        ),
+        element: <Profile />,
       },
     ],
   },
